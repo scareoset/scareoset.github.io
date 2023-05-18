@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background-color: #121517;
+}
+
+.main {
+    font-family: "Comic Sans MS";
+    color: #fafaff;
+}
+
+#fuck_you {
+    font-family: "Comic Sans MS";
+    color: aqua;
+}
+
+.box_zone {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    background-color: #fafaff;
+    margin: 16px;
+    padding: 8px;
+    width: fit-content;
+    color: #19a4ac;
+    border-style: groove;
+    border-color: #19a4ac;
+    border-radius: 25px;
+}
