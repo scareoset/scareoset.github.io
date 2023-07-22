@@ -19,7 +19,12 @@
   
     <script type="text/jsx">
         const app = document.getElementById('app');
-        ReactDOM.render(<h1>doing silly cat things :3</h1>, app);
+
+        function Header() {
+            return(<h1>doing silly cat things :3</h1>);
+        }
+
+        ReactDOM.render(<Header />, app);
     </script>
   </body>
 </html>
