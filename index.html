@@ -25,7 +25,14 @@
         }
 
         function HomePage() {
+            const [pogs, setPogs] = React.useState(0);
+
             const names = ['dani', 'scareoset'];
+
+            function handleClick() {
+                setPogs(pogs + 1);
+            }
+
             return (
                 <div>
                     {/* nesting the Header component */}
@@ -33,9 +40,11 @@
                     <Header title="" />
                     <ul>
                         {names.map((name) => (
-                            <li>{name}</li>
+                            <li key={name}>{name}</li>
                         ))}
                     </ul>
+
+                    <button onClick={handleClick}>pog! pogs: ({pogs})!</button>
                 </div>
             );
         }
