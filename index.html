@@ -21,8 +21,7 @@
         const app = document.getElementById('app');
 
         function Header({ title }) {
-            console.log(title);
-            return (<h1>{title}]</h1>);
+            return (<h1>{title ? title: ">:3"}</h1>);
         }
 
         function HomePage() {
@@ -30,6 +29,7 @@
                 <div>
                     {/* nesting the Header component */}
                     <Header title="doing silly cat things (inside a function!) :3" />
+                    <Header title="" />
                 </div>
             );
         }
