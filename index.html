@@ -24,7 +24,16 @@
             return (<h1>doing silly cat things (inside a function!) :3</h1>);
         }
 
-        ReactDOM.render(<Header />, app);
+        function HomePage() {
+            return (
+                <div>
+                    {/* nesting the Header component */}
+                    <Header />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HomePage />, app);
     </script>
   </body>
 </html>
