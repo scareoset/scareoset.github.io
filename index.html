@@ -12,23 +12,13 @@
     
     <div id="app"></div>
     
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
     <script type="text/javascript">
-      // grab the div box with an id of 'app'
-      const app = document.getElementById('app');
-      
-      // make a new <h1> element
-      const header = document.createElement('h1');
-      
-      // make a new text node for the header's content
-      const headerContent = document.createTextNode(
-        'silly cat stuff! :3',
-      );
-      
-      // throw that headerContent in the header!
-      header.appendChild(headerContent);
-      
-      // put the header in the app div class
-      app.appendChild(header);
+        const app = document.getElementById('app');
+        ReactDOM.render(<h1>doing silly cat things :3</h1>, app);
     </script>
   </body>
 </html>
