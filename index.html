@@ -20,15 +20,16 @@
     <script type="text/jsx">
         const app = document.getElementById('app');
 
-        function Header() {
-            return (<h1>doing silly cat things (inside a function!) :3</h1>);
+        function Header({ title }) {
+            console.Log(title);
+            return (<h1>{title}]</h1>);
         }
 
         function HomePage() {
             return (
                 <div>
                     {/* nesting the Header component */}
-                    <Header title=">:3" />
+                    <Header title="doing silly cat things (inside a function!) :3" />
                 </div>
             );
         }
