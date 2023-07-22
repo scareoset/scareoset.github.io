@@ -25,11 +25,17 @@
         }
 
         function HomePage() {
+            const names = ['dani', 'scareoset'];
             return (
                 <div>
                     {/* nesting the Header component */}
                     <Header title="doing silly cat things (inside a function!) :3" />
                     <Header title="" />
+                    <ul>
+                        {names.map((name) => (
+                            <li>{name}</li>
+                        ))}
+                    </ul>
                 </div>
             );
         }
