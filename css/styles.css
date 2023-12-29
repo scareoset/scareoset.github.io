@@ -26,8 +26,24 @@
     padding: 8px;
   }
 
-  a {
+  a:link {
     color: #fafaff;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #fafaff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #facade;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: #fafaff;
+    text-decoration: none;
   }
   
   div.crabs {
