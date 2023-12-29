@@ -25,6 +25,10 @@
     overflow-x: hidden;
     padding: 8px;
   }
+
+  a {
+    color: #fafaff;
+  }
   
   div.crabs {
     width: auto;
