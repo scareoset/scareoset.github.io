@@ -72,6 +72,19 @@
     border-radius: 16px;
     padding: 8px;
   }
+
+  div.points {
+    width: 25%;
+    height: 275px;
+    float: center;
+    text-align: left;
+    font-size: 24px;
+    border-style: solid;
+    border-color: #242a2e;
+    border-width: 2px;
+    border-radius: 16px;
+    padding: 8px;
+  }
   
   button {
     border: none;
