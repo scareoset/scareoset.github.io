@@ -1,55 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scareoset</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-   </head>
-  <body>
-    <h1>under construction...</h1>
-    <p>:3</p>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>crab clicker</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon_io/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="crabs">
+    <p id="crabCount">crabs: 1/10</p>
+    <p id="moneyCount">money: $0 ($1/second)</p>
     
-    <div id="app"></div>
+    <button class="crab" onclick="makeCrab()">&#129408;</button> get crab <span id="crabCost">($5)</span>
+    <br>
+    <button class="space" onclick="addSpace()">&#128230;</button> add space <span id="spaceCost">($25)</span>
+    <br>
+    <button class="crabUpgrade" onclick="upgradeCrab()">♋︎</button> upgrade crab <span id="crabUpgradeCost">($100)</span>
+  </div>
 
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <!-- Babel Script -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
-    <script type="text/jsx">
-        const app = document.getElementById('app');
+  <div class="consoleBlock" id="consoleBlock">
+    <p>you like crabs.</p>
+  </div>
 
-        function Header({ title }) {
-            return (<h1>{title ? title: ">:3"}</h1>);
-        }
+  <script src="/js/index.js"></script>
+</body>
 
-        function HomePage() {
-            const [pogs, setPogs] = React.useState(0);
-
-            const names = ['dani', 'scareoset'];
-
-            function handleClick() {
-                setPogs(pogs + 1);
-            }
-
-            return (
-                <div>
-                    {/* nesting the Header component */}
-                    <Header title="doing silly cat things (inside a function!) :3" />
-                    <Header title="" />
-                    <ul>
-                        {names.map((name) => (
-                            <li key={name}>{name}</li>
-                        ))}
-                    </ul>
-
-                    <button onClick={handleClick}>pog! pogs: ({pogs})!</button>
-                </div>
-            );
-        }
-
-        ReactDOM.render(<HomePage />, app);
-    </script>
-  </body>
 </html>
