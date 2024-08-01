@@ -92,3 +92,7 @@
     font-size: 36px;
   }
   
+  iframe {
+    display: block;
+    border-style:none;
+  }
