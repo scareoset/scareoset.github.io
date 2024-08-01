@@ -93,6 +93,7 @@
   }
   
   iframe {
+    align-self: center;
     display: block;
     border-style:none;
   }
