@@ -379,14 +379,10 @@ function shuffleDeck() {
 }
 
 function reshuffleDeck() {
-    hand.forEach((card) => {
-        deck.cards.push(card);
-        hand.pop();
-    });
-    discard.forEach((card) => {
-        deck.cards.push(card);
-        discard.pop();
-    });
+    deck.cards.push(hand);
+    hand = [];
+    deck.cards.push(discard);
+    discard = [];
     shuffleDeck();
 }
 
