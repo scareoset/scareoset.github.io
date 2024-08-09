@@ -362,7 +362,46 @@ var deck = new Deck();
 var hand = new Array();
 var discard = new Array();
 
+// fisher-yates shuffle
+// -- To shuffle an array a of n elements (indices 0..n-1):
+// for i from 0 to n−2 do
+//      j ← random integer such that i ≤ j < n
+//      exchange a[i] and a[j]
+function shuffleDeck() {
+    if(deck instanceof Deck) {
+        for(let i = 0; i < deck.cards.length-2; i++) {
+            let j = getRandomInt(i, deck.cards.length);
+            let swapCard = deck.cards[i];
+            deck.cards[i] = deck.cards[j];
+            deck.cards[j] = swapCard;
+        }
+    }
+}
+
+function reshuffleDeck() {
+    hand.forEach((card) => {
+        deck.cards.push(card);
+        hand.pop();
+    });
+    discard.forEach((card) => {
+        deck.cards.push(card);
+        discard.pop();
+    });
+    shuffleDeck();
+}
+
+// random int function from
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    // The maximum is exclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+  }
+
 function drawCard() {
     hand.push(deck.cards.pop());
     console.log(hand);
 }
+
+shuffleDeck();
