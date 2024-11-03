@@ -78,12 +78,13 @@ div.consoleBlock {
   padding: 8px;
 }
 
-div.points {
+div.points, div.game {
   width: 25%;
-  height: 275px;
-  float: center;
+  height: auto;
+  float: right;
   text-align: left;
   font-size: 24px;
+  color: #fafaff;
   border-style: solid;
   border-color: #242a2e;
   border-width: 2px;
@@ -91,11 +92,16 @@ div.points {
   padding: 8px;
 }
 
-button {
+div.shop {
+  width: auto;
+}
+
+/* button {
   border: none;
   background-color: inherit;
+  color: #fafaff;
   font-size: 36px;
-}
+} */
 
 button.deck {
   font-size: 14px;

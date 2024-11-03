@@ -3,19 +3,32 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>points system</title>
+    <title>incremental test</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/favicon_io/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-  <div class="sidebar">
-    <a href="index.html">home</a><br>
-    <a href="incremental.html">incremental game</a><br>
-    <a href="#points">points</a><br>
-    <a href="tarot.html">tarot</a><br>
-    <a href="tarot2.html">tarot2</a>
-  </div>
+    <div>
+        <div class="sidebar">
+            <a href="index.html">home</a><br>
+            <a href="incremental.html">incremental game</a><br>
+          </div>
+        
+          <div class="game">
+            <p id="mainResourceLabel">resource: 0.00</p>
+            <button onclick="manualCollect()">collect resource</button>
+            
+          <div class="shop">
+            <p id="collectorsLabel">collectors (lvl 0)</p>
+            <button onclick="buyCollector()">buy collector</button>
+            <br>
+            <button onclick="upgradeCollector()">upgrade collectors</button>
+          </div>
+          </div>
+    </div>
+
+    <script src="/js/incremental.js"></script>
 </body>
 
 </html>
